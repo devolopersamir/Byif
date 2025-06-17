@@ -1,82 +1,60 @@
-<!DOCTYPE html>
-<html lang="bn">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>নোটিশ পেজ - Matten.Me ফন্ট সহ</title>
-  
-  <!-- Matten.Me থেকে SolaimanLipi ফন্ট লিঙ্ক -->
-  <link
-    href="https://fonts.matten.me/css2?family=SolaimanLipi&display=swap"
-    rel="stylesheet"
-  />
+  <title>নোটিশ পেজ</title>
+
+  <!-- Matten.me থেকে SolaimanLipi ফন্ট -->
+  <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet" />
 
   <style>
     body {
+      font-family: 'SolaimanLipi', Arial, sans-serif;
+      background: linear-gradient(135deg, #6a4b7b, #4a2366);
       margin: 0;
-      min-height: 100vh;
+      padding: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #6a4b7b, #4a2366);
-      font-family: 'SolaimanLipi', Arial, sans-serif;
+      height: 100vh;
       color: #fff;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-x: hidden;
     }
 
     .glass-card {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255,255,255,0.12);
       border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
       padding: 30px 25px;
       max-width: 480px;
       width: 100%;
+      box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.18);
       text-align: center;
-
-      /* Animation */
       animation: fadeInScale 2s ease forwards, pulseGlow 3s ease-in-out infinite alternate;
     }
 
     h2 {
-      margin-bottom: 15px;
       font-size: 2.2rem;
+      margin-bottom: 15px;
       letter-spacing: 1.5px;
-      text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.7),
-        0 0 20px rgba(255, 255, 255, 0.4);
+      text-shadow: 0 0 10px rgba(255,255,255,0.7), 0 0 20px rgba(255,255,255,0.4);
       animation: flickerText 3s linear infinite;
     }
 
     p {
       font-size: 1.25rem;
       line-height: 1.6;
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+      text-shadow: 0 0 8px rgba(255,255,255,0.3);
     }
 
-    /* Animation keyframes */
     @keyframes fadeInScale {
-      0% {
-        opacity: 0;
-        transform: scale(0.85);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
+      0% {opacity: 0; transform: scale(0.85);}
+      100% {opacity: 1; transform: scale(1);}
     }
 
     @keyframes pulseGlow {
-      0% {
-        box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.2);
-      }
-      100% {
-        box-shadow: 0 0 25px 8px rgba(255, 255, 255, 0.45);
-      }
+      0% {box-shadow: 0 0 8px 2px rgba(255,255,255,0.2);}
+      100% {box-shadow: 0 0 25px 8px rgba(255,255,255,0.45);}
     }
 
     @keyframes flickerText {
@@ -104,21 +82,16 @@
       }
     }
 
-    /* Responsive font size */
+    /* Responsive */
     @media (max-width: 480px) {
-      h2 {
-        font-size: 1.8rem;
-      }
-      p {
-        font-size: 1.1rem;
-      }
+      h2 {font-size: 1.8rem;}
+      p {font-size: 1.1rem;}
     }
   </style>
 </head>
 <body>
   <div class="glass-card" role="alert" aria-live="polite">
     <h2>গুরুত্বপূর্ণ নোটিশ</h2>
-    <p>ডিজিটাল বাংলাদেশ অলিম্পিয়াড ২০২৫-এর রেজিস্ট্রেশন আগামী ৩১ জুন পর্যন্ত চলবে। অংশগ্রহণ করতে দ্রুত রেজিস্ট্রেশন করুন।</p>
+    <p>ডিজিটাল বাংলাদেশ অলিম্পিয়াড ২০২৫-এর রেজিস্ট্রেশন আগামী ৩১ জুন পর্যন্ত চলবে। দ্রুত রেজিস্ট্রেশন করুন।</p>
   </div>
 </body>
-</html>
