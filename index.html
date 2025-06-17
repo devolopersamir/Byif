@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bangladesh Youth ICT Forum Self Desk</title>
+  <title>Bangladesh Youth ICT Forum</title>
 
   <!-- Matten.me থেকে SolaimanLipi ফন্ট -->
   <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet" />
@@ -74,7 +74,7 @@
       box-shadow: 0 4px 15px 0px #fff;
     }
     @keyframes fadeInScale {
-      0% {opacity: 0; transform: scale(0.85);}
+      0% {opacity: 0; transform: scale(0.85);} 
       100% {opacity: 1; transform: scale(1);} 
     }
     @keyframes pulseGlow {
@@ -161,31 +161,52 @@
     <p>প্রিয় শিক্ষার্থীরা, অনুগ্রহ করে নীচের লিংকগুলো ব্যবহারের মাধ্যমে তোমরা তোমাদের কার্যক্রম সম্পন্ন করতে পারো।</p>
 
     <span class="btn" id="selfDeskBtn"><i class="fas fa-user-lock"></i> সেলফ ডেস্ক লগইন </span>
+    <span class="btn" id="noticeBtn"><i class="fas fa-bell"></i> সাম্প্রতিক নোটিশ </span>
     <a href="#" class="btn"><i class="fas fa-school"></i> শিক্ষার্থী সেবা কেন্দ্র </a>
     <a href="#" class="btn"><i class="fas fa-bolt"></i> এক ক্লিকে সেবা </a>
-    <a href="#" class="btn"><i class="fas fa-globe"></i> ডিজিবিও পোর্টাল </a>
-    <a href="#" class="btn"><i class="fas fa-plus-circle"></i> নতুন আবেদন </a>
+    <a href="https://dgbo.vercel.app" class="btn"><i class="fas fa-globe"></i> ডিজিবিও পোর্টাল </a>
+    <a href="https://dgbo.vercel.app" class="btn"><i class="fas fa-plus-circle"></i> নতুন আবেদন </a>
   </div>
 
-  <div class="modal" id="modal">
+  <!-- Self Desk Modal -->
+  <div class="modal" id="selfDeskModal">
     <div class="modal-content">
       <p> এই মুহূর্তে, বাংলাদেশ ইয়ুথ আইসিটি ফোরাম লগইন সেবা সাময়িক সময়ের জন্য বন্ধ রেখেছে। আমার সার্ভার ট্রান্সপোর্টের কাজ চলছে। আপনার অপেক্ষার জন্য ধন্যবাদ। </p>
-      <button id="closeBtn"><i class="fas fa-times-circle"></i> বন্ধ করুন </button>
+      <button id="selfDeskClose"><i class="fas fa-times-circle"></i> বন্ধ করুন </button>
+    </div>
+  </div>
+
+  <!-- Notice Modal -->
+  <div class="modal" id="noticeModal">
+    <div class="modal-content">
+      <p> এই মুহূর্তে কোনো নোটিশ নেই </p>
+      <button id="noticeClose"><i class="fas fa-times-circle"></i> বন্ধ করুন </button>
     </div>
   </div>
 
   <script>
     document.getElementById('selfDeskBtn').addEventListener('click', () => {
-      document.getElementById('modal').classList.add('active');
+      document.getElementById('selfDeskModal').classList.add('active');
     });
 
-    document.getElementById('closeBtn').addEventListener('click', () => {
-      document.getElementById('modal').classList.remove('active');
+    document.getElementById('selfDeskClose').addEventListener('click', () => {
+      document.getElementById('selfDeskModal').classList.remove('active');
+    });
+
+    document.getElementById('noticeBtn').addEventListener('click', () => {
+      document.getElementById('noticeModal').classList.add('active');
+    });
+
+    document.getElementById('noticeClose').addEventListener('click', () => {
+      document.getElementById('noticeModal').classList.remove('active');
     });
 
     window.addEventListener('click', (e) => {
-      if (e.target === document.getElementById('modal')) {
-        document.getElementById('modal').classList.remove('active');
+      if (e.target === document.getElementById('selfDeskModal')) {
+        document.getElementById('selfDeskModal').classList.remove('active');
+      }
+      if (e.target === document.getElementById('noticeModal')) {
+        document.getElementById('noticeModal').classList.remove('active');
       }
     });
   </script>
