@@ -1,10 +1,16 @@
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bangladesh Youth Ict Fourm Self Desk</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bangladesh Youth ICT Forum Self Desk</title>
 
   <!-- Matten.me থেকে SolaimanLipi ফন্ট -->
   <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css"
+  />
 
   <style>
     body {
@@ -18,47 +24,65 @@
       height: 100vh;
       color: #fff;
     }
-
     .glass-card {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
       border-radius: 20px;
       padding: 30px 25px;
       max-width: 480px;
       width: 100%;
-      box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.18);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       text-align: center;
       animation: fadeInScale 2s ease forwards, pulseGlow 3s ease-in-out infinite alternate;
     }
-
     h2 {
       font-size: 2.2rem;
       margin-bottom: 15px;
       letter-spacing: 1.5px;
-      text-shadow: 0 0 10px rgba(255,255,255,0.7), 0 0 20px rgba(255,255,255,0.4);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(255, 255, 255, 0.4);
       animation: flickerText 3s linear infinite;
     }
-
     p {
       font-size: 1.25rem;
       line-height: 1.6;
-      text-shadow: 0 0 8px rgba(255,255,255,0.3);
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
     }
-
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #9b59b6;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    .btn i {
+      font-size: 1.3rem;
+    }
+    .btn:hover {
+      background: #8e44ad;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px 0px #fff;
+    }
     @keyframes fadeInScale {
       0% {opacity: 0; transform: scale(0.85);}
       100% {opacity: 1; transform: scale(1);}
     }
-
     @keyframes pulseGlow {
-      0% {box-shadow: 0 0 8px 2px rgba(255,255,255,0.2);}
-      100% {box-shadow: 0 0 25px 8px rgba(255,255,255,0.45);}
+      0% {box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.2);}
+      100% {box-shadow: 0 0 25px 8px rgba(255, 255, 255, 0.45);} 
     }
-
     @keyframes flickerText {
-      0%, 100% {
+      0%,
+      100% {
         text-shadow:
           0 0 8px #fff,
           0 0 15px #fff,
@@ -81,17 +105,22 @@
           0 0 35px #9b59b6;
       }
     }
-
-    /* Responsive */
     @media (max-width: 480px) {
       h2 {font-size: 1.8rem;}
       p {font-size: 1.1rem;}
     }
   </style>
 </head>
+
 <body>
   <div class="glass-card" role="alert" aria-live="polite">
-    <h2> বাংলাদেশ ইয়ুথ আইসিটি ফোরাম সর্বশেষ নোটিশ</h2>
-    <p>প্রিয় শিক্ষার্থীরা, বাংলাদেশ ইয়ুথ আইসিটি ফোরাম এবং ডিজিটাল বাংলাদেশ অলিম্পিয়াডের পক্ষ থেকে সবাইকে জানাই শুভেচ্ছা ও অভিনন্দন। বর্তমানে মাধ্যমিক পর্যায়ে সবার স্কুলে অর্ধবার্ষিক পরিক্ষা থাকায় ০৮ জুলাই ২০২৫ পর্যন্ত আমাদের মাধ্যমিক শিক্ষার্থীদের সকল কার্যক্রম বন্ধ থাকবে। আপনি চাইলেই আপনার সেল্ফডেস্ক এর মাধ্যমে লগইন করতে পারবেন এবং যেকোন সমস্যায় আমাদের হেল্পলাইন নম্বরে যোগাযোগ করতে পারেন। ভালো থাকুন, সুস্থ থাকুন।</p>
+    <h2> বাংলাদেশ ইয়ুথ আইসিটি ফোরাম </h2>
+    <p>প্রিয় শিক্ষার্থীরা, অনুগ্রহ করে নীচের লিংকগুলো ব্যবহারের মাধ্যমে তোমরা তোমাদের কার্যক্রম সম্পন্ন করতে পারো।</p>
+
+    <a href="#" class="btn"><i class="fas fa-user-lock"></i> সেলফ ডেস্ক লগইন </a>
+    <a href="#" class="btn"><i class="fas fa-school"></i> শিক্ষার্থী সেবা কেন্দ্র </a>
+    <a href="#" class="btn"><i class="fas fa-bolt"></i> এক ক্লিকে সেবা </a>
+    <a href="#" class="btn"><i class="fas fa-globe"></i> ডিজিবিও পোর্টাল </a>
+    <a href="#" class="btn"><i class="fas fa-plus-circle"></i> নতুন আবেদন </a>
   </div>
 </body>
