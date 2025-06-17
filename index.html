@@ -3,111 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <title>Bangladesh Youth ICT Forum</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/scrollreveal@4"></script>
-<style>
-    .glass {
-        background:rgba(128, 0, 128, 0.3);
-        backdrop-filter:blur(10px);
-        border:1px solidrgba(255, 255, 255, 0.2);
-    }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body>
     <!-- Hero Section -->
-    <section class="flex flex-col items-center justify-center p-6 text-center">
-        <img src="https://via.placeholder.com/500x250" alt="hero photo" 
-             class="mb-6 w-11/12 sm:w-1/2 rounded-lg shadow-2xl transform transition duration-500 ease-in-out hover:scale-105">
-        <h1 class="text-4xl sm:text-5xl font-semibold mb-4">
-            Bangladesh Youth ICT Forum
-        </h1>
-        <p class="max-w-md mb-6">
-            Empowering youth through education, initiatives, and technology to lead the future of Bangladesh.
-        </p>
-        <a 
-            href="#sponsors" 
-            class="px-6 py-2 bg-purple-500 text-gray-100 font-semibold rounded-md transition ease-in-out transform hover:translate-y-1">
-            Explore More
-        </a>
+    <section id="hero">
+        <img src="https://via.placeholder.com/500x250" alt="hero photo">
+        <h1>Bangladesh Youth ICT Forum</h1>
+        <p>Empowering youth through education, initiatives, and technology.</p>
+        <a href="#sponsors" class="cta">Explore More</a>
     </section>
 
     <!-- Sponsors Section -->
-    <section id="sponsors" class="max-w-7xl mx-auto p-6">
-        <h2 class="text-3xl font-semibold mb-6 text-center">
-            Sponsors
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div class="glass p-6 rounded-lg shadow-md transform transition duration-500 ease-in-out hover:rotate-2">
-                <img src="https://via.placeholder.com/150" alt="Sponsor 1" 
-                     class="rounded-md mb-4">
-                <h3 class="text-2xl font-semibold">Sponsor 1</h3>
+    <section id="sponsors">
+        <h2>Sponsors</h2>
+        <div class="card-grid">
+            <div class="glass-card">
+                <img src="https://via.placeholder.com/150" alt="Sponsor 1">
+                <h3>Sponsor 1</h3>
             </div>
-            <div class="glass p-6 rounded-lg shadow-md transform transition duration-500 ease-in-out hover:rotate-2">
-                <img src="https://via.placeholder.com/150" alt="Sponsor 2" 
-                     class="rounded-md mb-4">
-                <h3 class="text-2xl font-semibold">Sponsor 2</h3>
+            <div class="glass-card">
+                <img src="https://via.placeholder.com/150" alt="Sponsor 2">
+                <h3>Sponsor 2</h3>
             </div>
-            <div class="glass p-6 rounded-lg shadow-md transform transition duration-500 ease-in-out hover:rotate-2">
-                <img src="https://via.placeholder.com/150" alt="Sponsor 3" 
-                     class="rounded-md mb-4">
-                <h3 class="text-2xl font-semibold">Sponsor 3</h3>
+            <div class="glass-card">
+                <img src="https://via.placeholder.com/150" alt="Sponsor 3">
+                <h3>Sponsor 3</h3>
             </div>
         </div>
     </section>
 
     <!-- Related Organization Section -->
-    <section id="organizations" class="max-w-7xl mx-auto p-6">
-        <h2 class="text-3xl font-semibold mb-6 text-center">
-            Related Organizations
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div class="glass p-6 rounded-lg shadow-md transform transition duration-500 ease-in-out hover:rotate-2">
-                <img src="https://via.placeholder.com/150" alt="organization 1" 
-                     class="rounded-md mb-4">
-                <h3 class="text-2xl font-semibold">Organization 1</h3>
+    <section id="organizations">
+        <h2>Related Organizations</h2>
+        <div class="card-grid">
+            <div class="glass-card">
+                <img src="https://via.placeholder.com/150" alt="organization 1">
+                <h3>Organization 1</h3>
             </div>
-            <div class="glass p-6 rounded-lg shadow-md transform transition duration-500 ease-in-out hover:rotate-2">
-                <img src="https://via.placeholder.com/150" alt="organization 2" 
-                     class="rounded-md mb-4">
-                <h3 class="text-2xl font-semibold">Organization 2</h3>
+            <div class="glass-card">
+                <img src="https://via.placeholder.com/150" alt="organization 2">
+                <h3>Organization 2</h3>
             </div>
-            <div class="glass p-6 rounded-lg shadow-md transform transition duration-500 ease-in-out hover:rotate-2">
-                <img src="https://via.placeholder.com/150" alt="organization 3" 
-                     class="rounded-md mb-4">
-                <h3 class="text-2xl font-semibold">Organization 3</h3>
+            <div class="glass-card">
+                <img src="https://via.placeholder.com/150" alt="organization 3">
+                <h3>Organization 3</h3>
             </div>
         </div>
     </section>
 
     <!-- Founder Section -->
-    <section id="founder" class="max-w-7xl mx-auto p-6">
-        <h2 class="text-3xl font-semibold mb-6 text-center">
-            Founder
-        </h2>
-        <div class="glass p-6 rounded-lg shadow-md transform transition duration-500 ease-in-out hover:shadow-2xl flex flex-col items-center">
-            <img src="https://via.placeholder.com/200" alt="founder photo" 
-                 class="rounded-md mb-4">
-            <h3 class="text-2xl font-semibold mb-2">
-                Founder Name
-            </h3>
-            <p class="max-w-md text-center">
-                “This is a motivational quote or a short message from the founder about future goals and missions.” 
-            </p>
+    <section id="founder">
+        <h2>Founder</h2>
+        <div class="glass-card founder">
+            <img src="https://via.placeholder.com/200" alt="founder photo">
+            <h3>Founder Name</h3>
+            <p>“This is a motivational quote or a short message from the founder.”</p>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="bg-purple-900 p-6 text-center">
-        <p>© 2025 Bangladesh Youth ICT Forum. All Rights Reserved.</p>
+    <footer>
+        <p>© 2025 Bangladesh Youth ICT Forum</p>
     </footer>
 
-    <script>
-      ScrollReveal().reveal('section', { 
-        duration: 1000, 
-        distance:'50px',
-        origin:'bottom',
-        interval: 200 
-      });
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
