@@ -1,74 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <head>
-    <link rel="stylesheet" href="css/style.css">
-    </head>
-<meta charset="UTF-8">
-<title>Bangladesh Youth ICT Forum</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>নোটিশ পেজ</title>
+  <!-- Google Fonts এ SolaimanLipi না থাকায়, CDN থেকে Load করার জন্য বিকল্প হিসেবে-->
+  <style>
+    @font-face {
+      font-family: 'SolaimanLipi';
+      src: url('https://cdn.jsdelivr.net/gh/alif-type/solaimanlipi/SolaimanLipi.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a4b7b, #4a2366);
+      font-family: 'SolaimanLipi', Arial, sans-serif;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 30px 25px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 2.2rem;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Glow animation */
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    /* Responsive font size */
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <img src="https://via.placeholder.com/500x250" alt="hero photo">
-        <h1>Bangladesh Youth ICT Forum</h1>
-        <p>Empowering youth through education, initiatives, and technology.</p>
-        <a href="#sponsors" class="cta">Explore More</a>
-    </section>
-
-    <!-- Sponsors Section -->
-    <section id="sponsors">
-        <h2>Sponsors</h2>
-        <div class="card-grid">
-            <div class="glass-card">
-                <img src="https://via.placeholder.com/150" alt="Sponsor 1">
-                <h3>Sponsor 1</h3>
-            </div>
-            <div class="glass-card">
-                <img src="https://via.placeholder.com/150" alt="Sponsor 2">
-                <h3>Sponsor 2</h3>
-            </div>
-            <div class="glass-card">
-                <img src="https://via.placeholder.com/150" alt="Sponsor 3">
-                <h3>Sponsor 3</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Related Organization Section -->
-    <section id="organizations">
-        <h2>Related Organizations</h2>
-        <div class="card-grid">
-            <div class="glass-card">
-                <img src="https://via.placeholder.com/150" alt="organization 1">
-                <h3>Organization 1</h3>
-            </div>
-            <div class="glass-card">
-                <img src="https://via.placeholder.com/150" alt="organization 2">
-                <h3>Organization 2</h3>
-            </div>
-            <div class="glass-card">
-                <img src="https://via.placeholder.com/150" alt="organization 3">
-                <h3>Organization 3</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Founder Section -->
-    <section id="founder">
-        <h2>Founder</h2>
-        <div class="glass-card founder">
-            <img src="https://via.placeholder.com/200" alt="founder photo">
-            <h3>Founder Name</h3>
-            <p>“This is a motivational quote or a short message from the founder.”</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Bangladesh Youth ICT Forum</p>
-    </footer>
-
-<script src="script.js"></script>
+  <div class="glass-card" role="alert" aria-live="polite">
+    <h2>গুরুত্বপূর্ণ নোটিশ</h2>
+    <p>ডিজিটাল বাংলাদেশ অলিম্পিয়াড ২০২৫-এর রেজিস্ট্রেশন আগামী ৩১ জুন পর্যন্ত চলবে। অংশগ্রহণ করতে দ্রুত রেজিস্ট্রেশন করুন।</p>
+  </div>
 </body>
 </html>
