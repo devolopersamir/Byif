@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>শিক্ষার্থী সেবা কেন্দ্র</title>
+
+<link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+body {
+    font-family:'SolaimanLipi', Arial,sans-serif;
+    background: linear-gradient(135deg, #6a4b7b, #4a2366);
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 30px 25px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    animation: fadeInScale 2s ease forwards;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeInScale {
+    0% {opacity: 0; transform: scale(0.85);}
+    100% {opacity: 1; transform: scale(1);}
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #9b59b6;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #fff;
+}
+
+a, button {
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px -4px black;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+a:hover, button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px -5px black;
+}
+
+.back {
+    margin-bottom: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back i {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.back:hover i {
+    transform: translateX(-5px);
+}
+
+@media (max-width: 480px) {
+    h2 {font-size: 1.7rem;}
+    p {font-size: 1.1rem;}
+    a, button {padding: 10px; font-size: 1rem;}
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup .glass-card {
+    max-width: 400px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.popup .glass-card .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back"><i class="fas fa-arrow-left"></i> পেছনে যান </a>
+
+<div class="glass-card">
+    <h2>শিক্ষার্থী সেবা কেন্দ্র</h2>
+    <p>আপনি এখানে অনলাইন সুবিধা সমূহ পেতে পারবেন</p>
+
+    <button id="smsBtn"><i class="fas fa-sms"></i> এসএমএস এলার্ট চালু </button>
+    <button id="emailBtn"><i class="fas fa-envelope"></i> ই-মেইল এলার্ট চালু </button>
+    <button id="useridBtn"><i class="fas fa-user"></i> ইউজার আইডি সেবা </button>
+</div>
+
+<div id="smsPopup" class="popup">
+    <div class="glass-card">
+        <span class="close" data-target="#smsPopup"><i class="fas fa-times"></i></span>
+        <h2>এসএমএস এলার্ট</h2>
+        <p>আপনার ফোন নাম্বর দিন এবং এলার্ট চালু করুন</p>
+        <form action="https://formspree.io/f/web.samirtalukder@gmail.com" method="POST">
+            <input name="phone" type="tel" placeholder="আপনার ফোন নাম্বর" required style="width:100%;padding:10px;margin-bottom:15px;border-radius:10px;border:none">
+            <input type="submit" value="চালু করুন" style="padding:10px 20px;background:#9b59b6;color:#fff;border:none;border-radius:10px;cursor:pointer">
+        </form>
+    </div>
+</div>
+
+<div id="emailPopup" class="popup">
+    <div class="glass-card">
+        <span class="close" data-target="#emailPopup"><i class="fas fa-times"></i></span>
+        <h2>ই-мেইল এলার্ট</h2>
+        <p>আপনার ই-мেইল দিন এবং এলার্ট চালু করুন</p>
+        <form action="https://formspree.io/f/web.samirtalukder@gmail.com" method="POST">
+            <input name="email" type="email" placeholder="আপনার ই-মেইল" required style="width:100%;padding:10px;margin-bottom:15px;border-radius:10px;border:none">
+            <input type="submit" value="চালু করুন" style="padding:10px 20px;background:#9b59b6;color:#fff;border:none;border-radius:10px;cursor:pointer">
+        </form>
+    </div>
+</div>
+
+<div id="useridPopup" class="popup">
+    <div class="glass-card">
+        <span class="close" data-target="#useridPopup"><i class="fas fa-times"></i></span>
+        <h2>ইউজার আইডিতে তথ্য</h2>
+        <p>আপনি যদি ইউজার আইডিতে সহায়তা চাইেন, অনুগ্রহ করে 01712141304 এই নাম্বারে কল বা WhatsApp ম্যাসেজ করুন।</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('smsBtn').addEventListener('click', () => {
+        document.getElementById('smsPopup').classList.add('active');
+    });
+
+    document.getElementById('emailBtn').addEventListener('click', () => {
+        document.getElementById('emailPopup').classList.add('active');
+    });
+
+    document.getElementById('useridBtn').addEventListener('click', () => {
+        document.getElementById('useridPopup').classList.add('active');
+    });
+
+    document.querySelectorAll('.close').forEach(el => {
+        el.addEventListener('click', () => {
+            document.querySelector(el.dataset.target).classList.remove('active');
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('popup')) {
+            e.target.classList.remove('active');
+        }
+    })
+</script>
+
+</body>
+</html>
